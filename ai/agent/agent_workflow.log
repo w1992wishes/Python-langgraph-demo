@@ -1,0 +1,184 @@
+2025-08-13 23:21:16,406 [INFO] 🚩 启动工作流 | 初始问题: 分析Q3销售额下降原因
+2025-08-13 23:21:16,406 [DEBUG] 工作流结构:
+
+    graph TD
+        planner[规划节点] -->|需补充| clarify(交互节点)
+        planner -->|任务就绪| dispatch[分发节点]
+        dispatch -->|查询| query[查询节点]
+        dispatch -->|分析| analysis[分析节点]
+        dispatch -->|报告| report[报告节点]
+        dispatch -->|完成| final_step[结束节点]
+        query --> dispatch
+        analysis --> dispatch
+        report --> dispatch
+        clarify --> planner
+        final_step --> END([结束])
+    
+2025-08-13 23:21:16,413 [INFO] 🚀 进入规划节点 | 输入: 分析Q3销售额下降原因
+2025-08-13 23:21:17,213 [DEBUG] Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse'}, 'files': None, 'idempotency_key': 'stainless-python-retry-8ce78c25-48a2-4061-995c-c8a4cde2d270', 'post_parser': <function Completions.parse.<locals>.parser at 0x000001F87BA200E0>, 'json_data': {'messages': [{'content': '\n    根据用户输入「分析Q3销售额下降原因」进行任务规划：\n    1. 若包含明确指标/时间/维度 → 返回任务计划，plan_type 为 "query" 或 "analysis"，并列出任务步骤\n    2. 否则 → 返回缺失信息引导语，plan_type 为 "ambiguous"，并在 missing_info 字段说明需补充内容\n    输出格式：请用JSON格式输出, {"plan_type":"query", "task_list": ["query", "analysis", "report"], "missing_info": ""}', 'role': 'user'}], 'model': 'qwen-plus', 'response_format': {'type': 'json_schema', 'json_schema': {'schema': {'properties': {'plan_type': {'enum': ['query', 'analysis', 'ambiguous'], 'title': 'Plan Type', 'type': 'string'}, 'task_list': {'default': [], 'items': {'type': 'string'}, 'title': 'Task List', 'type': 'array'}, 'missing_info': {'default': '', 'title': 'Missing Info', 'type': 'string'}}, 'required': ['plan_type', 'task_list', 'missing_info'], 'title': 'PlanResponse', 'type': 'object', 'additionalProperties': False}, 'name': 'PlanResponse', 'strict': True}}, 'stream': False, 'temperature': 0.0}}
+2025-08-13 23:21:17,367 [DEBUG] Sending HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-08-13 23:21:17,368 [DEBUG] connect_tcp.started host='dashscope.aliyuncs.com' port=443 local_address=None timeout=None socket_options=None
+2025-08-13 23:21:17,425 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F87BA2E120>
+2025-08-13 23:21:17,425 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F87BA24150> server_hostname='dashscope.aliyuncs.com' timeout=None
+2025-08-13 23:21:17,479 [DEBUG] start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F87BE8E810>
+2025-08-13 23:21:17,479 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-08-13 23:21:17,480 [DEBUG] send_request_headers.complete
+2025-08-13 23:21:17,480 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-08-13 23:21:17,480 [DEBUG] send_request_body.complete
+2025-08-13 23:21:17,480 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-08-13 23:21:18,266 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'vary', b'Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding'), (b'x-request-id', b'd9441fd7-b167-9032-a5fd-7013d1403be2'), (b'x-dashscope-call-gateway', b'true'), (b'content-type', b'application/json'), (b'req-cost-time', b'739'), (b'req-arrive-time', b'1755098477173'), (b'resp-start-time', b'1755098477913'), (b'x-envoy-upstream-service-time', b'738'), (b'set-cookie', b'acw_tc=d9441fd7-b167-9032-a5fd-7013d1403be2bbde6941a1836910381dbd1933052b35;path=/;HttpOnly;Max-Age=1800'), (b'content-encoding', b'gzip'), (b'date', b'Wed, 13 Aug 2025 15:21:17 GMT'), (b'server', b'istio-envoy'), (b'transfer-encoding', b'chunked')])
+2025-08-13 23:21:18,267 [INFO] HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-13 23:21:18,267 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-08-13 23:21:18,269 [DEBUG] receive_response_body.complete
+2025-08-13 23:21:18,269 [DEBUG] response_closed.started
+2025-08-13 23:21:18,269 [DEBUG] response_closed.complete
+2025-08-13 23:21:18,269 [DEBUG] HTTP Response: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "200 OK" Headers({'vary': 'Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding', 'x-request-id': 'd9441fd7-b167-9032-a5fd-7013d1403be2', 'x-dashscope-call-gateway': 'true', 'content-type': 'application/json', 'req-cost-time': '739', 'req-arrive-time': '1755098477173', 'resp-start-time': '1755098477913', 'x-envoy-upstream-service-time': '738', 'set-cookie': 'acw_tc=d9441fd7-b167-9032-a5fd-7013d1403be2bbde6941a1836910381dbd1933052b35;path=/;HttpOnly;Max-Age=1800', 'content-encoding': 'gzip', 'date': 'Wed, 13 Aug 2025 15:21:17 GMT', 'server': 'istio-envoy', 'transfer-encoding': 'chunked'})
+2025-08-13 23:21:18,269 [DEBUG] request_id: d9441fd7-b167-9032-a5fd-7013d1403be2
+2025-08-13 23:21:18,281 [DEBUG] 规划结果: plan_type=query, tasks=3
+2025-08-13 23:21:18,282 [INFO] 🔄 任务分发 | 步骤 1/3
+2025-08-13 23:21:18,282 [DEBUG] 路由决策: query
+2025-08-13 23:21:18,282 [INFO] 🔍 执行查询任务: query
+2025-08-13 23:21:18,282 [INFO] 🔄 任务分发 | 步骤 2/3
+2025-08-13 23:21:18,282 [DEBUG] 路由决策: analysis
+2025-08-13 23:21:18,283 [INFO] 📊 执行分析任务: analysis
+2025-08-13 23:21:18,283 [INFO] 🔄 任务分发 | 步骤 3/3
+2025-08-13 23:21:18,283 [DEBUG] 路由决策: report
+2025-08-13 23:21:18,283 [INFO] 📝 生成最终报告
+2025-08-13 23:21:18,283 [INFO] 🔄 任务分发 | 步骤 4/3
+2025-08-13 23:22:02,258 [INFO] 🚩 启动工作流 | 初始问题: 分析Q3
+2025-08-13 23:22:02,259 [DEBUG] 工作流结构:
+
+    graph TD
+        planner[规划节点] -->|需补充| clarify(交互节点)
+        planner -->|任务就绪| dispatch[分发节点]
+        dispatch -->|查询| query[查询节点]
+        dispatch -->|分析| analysis[分析节点]
+        dispatch -->|报告| report[报告节点]
+        dispatch -->|完成| final_step[结束节点]
+        query --> dispatch
+        analysis --> dispatch
+        report --> dispatch
+        clarify --> planner
+        final_step --> END([结束])
+    
+2025-08-13 23:22:02,267 [INFO] 🚀 进入规划节点 | 输入: 分析Q3
+2025-08-13 23:22:03,050 [DEBUG] Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse'}, 'files': None, 'idempotency_key': 'stainless-python-retry-63a6ab42-6351-4816-8227-5746fdaacfe2', 'post_parser': <function Completions.parse.<locals>.parser at 0x0000019B0FC100E0>, 'json_data': {'messages': [{'content': '\n    根据用户输入「分析Q3」进行任务规划：\n    1. 若包含明确指标/时间/维度 → 返回任务计划，plan_type 为 "query" 或 "analysis"，并列出任务步骤\n    2. 否则 → 返回缺失信息引导语，plan_type 为 "ambiguous"，并在 missing_info 字段说明需补充内容\n    输出格式：请用JSON格式输出, {"plan_type":"query", "task_list": ["query", "analysis", "report"], "missing_info": ""}', 'role': 'user'}], 'model': 'qwen-plus', 'response_format': {'type': 'json_schema', 'json_schema': {'schema': {'properties': {'plan_type': {'enum': ['query', 'analysis', 'ambiguous'], 'title': 'Plan Type', 'type': 'string'}, 'task_list': {'default': [], 'items': {'type': 'string'}, 'title': 'Task List', 'type': 'array'}, 'missing_info': {'default': '', 'title': 'Missing Info', 'type': 'string'}}, 'required': ['plan_type', 'task_list', 'missing_info'], 'title': 'PlanResponse', 'type': 'object', 'additionalProperties': False}, 'name': 'PlanResponse', 'strict': True}}, 'stream': False, 'temperature': 0.0}}
+2025-08-13 23:22:03,127 [DEBUG] Sending HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-08-13 23:22:03,127 [DEBUG] connect_tcp.started host='dashscope.aliyuncs.com' port=443 local_address=None timeout=None socket_options=None
+2025-08-13 23:22:03,194 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000019B0FCA6120>
+2025-08-13 23:22:03,194 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x0000019B0FC14150> server_hostname='dashscope.aliyuncs.com' timeout=None
+2025-08-13 23:22:03,246 [DEBUG] start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000019B0FE29520>
+2025-08-13 23:22:03,246 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-08-13 23:22:03,246 [DEBUG] send_request_headers.complete
+2025-08-13 23:22:03,246 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-08-13 23:22:03,246 [DEBUG] send_request_body.complete
+2025-08-13 23:22:03,247 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-08-13 23:22:04,272 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'vary', b'Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding'), (b'x-request-id', b'aa4d8741-30cb-9040-a460-69596ac8eb51'), (b'x-dashscope-call-gateway', b'true'), (b'content-type', b'application/json'), (b'req-cost-time', b'980'), (b'req-arrive-time', b'1755098522934'), (b'resp-start-time', b'1755098523914'), (b'x-envoy-upstream-service-time', b'979'), (b'set-cookie', b'acw_tc=aa4d8741-30cb-9040-a460-69596ac8eb51c31f385b1af661dcebad217236e8d4ae;path=/;HttpOnly;Max-Age=1800'), (b'content-encoding', b'gzip'), (b'date', b'Wed, 13 Aug 2025 15:22:03 GMT'), (b'server', b'istio-envoy'), (b'transfer-encoding', b'chunked')])
+2025-08-13 23:22:04,272 [INFO] HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-13 23:22:04,272 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-08-13 23:22:04,273 [DEBUG] receive_response_body.complete
+2025-08-13 23:22:04,273 [DEBUG] response_closed.started
+2025-08-13 23:22:04,273 [DEBUG] response_closed.complete
+2025-08-13 23:22:04,273 [DEBUG] HTTP Response: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "200 OK" Headers({'vary': 'Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding', 'x-request-id': 'aa4d8741-30cb-9040-a460-69596ac8eb51', 'x-dashscope-call-gateway': 'true', 'content-type': 'application/json', 'req-cost-time': '980', 'req-arrive-time': '1755098522934', 'resp-start-time': '1755098523914', 'x-envoy-upstream-service-time': '979', 'set-cookie': 'acw_tc=aa4d8741-30cb-9040-a460-69596ac8eb51c31f385b1af661dcebad217236e8d4ae;path=/;HttpOnly;Max-Age=1800', 'content-encoding': 'gzip', 'date': 'Wed, 13 Aug 2025 15:22:03 GMT', 'server': 'istio-envoy', 'transfer-encoding': 'chunked'})
+2025-08-13 23:22:04,273 [DEBUG] request_id: aa4d8741-30cb-9040-a460-69596ac8eb51
+2025-08-13 23:22:04,285 [DEBUG] 规划结果: plan_type=ambiguous, tasks=0
+2025-08-13 23:22:04,285 [WARNING] ⚠️ 需要用户补充信息: 输入内容不明确，请补充具体指标、时间范围或分析维度等信息。
+2025-08-13 23:22:47,714 [INFO] 🚩 启动工作流 | 初始问题: 需要
+2025-08-13 23:22:47,714 [DEBUG] 工作流结构:
+
+    graph TD
+        planner[规划节点] -->|需补充| clarify(交互节点)
+        planner -->|任务就绪| dispatch[分发节点]
+        dispatch -->|查询| query[查询节点]
+        dispatch -->|分析| analysis[分析节点]
+        dispatch -->|报告| report[报告节点]
+        dispatch -->|完成| final_step[结束节点]
+        query --> dispatch
+        analysis --> dispatch
+        report --> dispatch
+        clarify --> planner
+        final_step --> END([结束])
+    
+2025-08-13 23:22:47,722 [INFO] 🚀 进入规划节点 | 输入: 需要
+2025-08-13 23:22:48,511 [DEBUG] Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse'}, 'files': None, 'idempotency_key': 'stainless-python-retry-74970ddd-5994-41ff-806b-fb43578a8745', 'post_parser': <function Completions.parse.<locals>.parser at 0x000002551D6300E0>, 'json_data': {'messages': [{'content': '\n    根据用户输入「需要」进行任务规划：\n    1. 若包含明确指标/时间/维度 → 返回任务计划，plan_type 为 "query" 或 "analysis"，并列出任务步骤\n    2. 否则 → 返回缺失信息引导语，plan_type 为 "ambiguous"，并在 missing_info 字段说明需补充内容\n    输出格式：请用JSON格式输出, {"plan_type":"query", "task_list": ["query", "analysis", "report"], "missing_info": ""}', 'role': 'user'}], 'model': 'qwen-plus', 'response_format': {'type': 'json_schema', 'json_schema': {'schema': {'properties': {'plan_type': {'enum': ['query', 'analysis', 'ambiguous'], 'title': 'Plan Type', 'type': 'string'}, 'task_list': {'default': [], 'items': {'type': 'string'}, 'title': 'Task List', 'type': 'array'}, 'missing_info': {'default': '', 'title': 'Missing Info', 'type': 'string'}}, 'required': ['plan_type', 'task_list', 'missing_info'], 'title': 'PlanResponse', 'type': 'object', 'additionalProperties': False}, 'name': 'PlanResponse', 'strict': True}}, 'stream': False, 'temperature': 0.0}}
+2025-08-13 23:22:48,590 [DEBUG] Sending HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-08-13 23:22:48,590 [DEBUG] connect_tcp.started host='dashscope.aliyuncs.com' port=443 local_address=None timeout=None socket_options=None
+2025-08-13 23:22:48,639 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002551DA36120>
+2025-08-13 23:22:48,639 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x000002551D634150> server_hostname='dashscope.aliyuncs.com' timeout=None
+2025-08-13 23:22:48,688 [DEBUG] start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002551D9F9520>
+2025-08-13 23:22:48,690 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-08-13 23:22:48,690 [DEBUG] send_request_headers.complete
+2025-08-13 23:22:48,690 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-08-13 23:22:48,690 [DEBUG] send_request_body.complete
+2025-08-13 23:22:48,690 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-08-13 23:22:49,669 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'vary', b'Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding'), (b'x-request-id', b'bee8384d-97ba-96eb-a128-bedab040b4b6'), (b'x-dashscope-call-gateway', b'true'), (b'content-type', b'application/json'), (b'req-cost-time', b'932'), (b'req-arrive-time', b'1755098568376'), (b'resp-start-time', b'1755098569309'), (b'x-envoy-upstream-service-time', b'931'), (b'set-cookie', b'acw_tc=bee8384d-97ba-96eb-a128-bedab040b4b6fda94b4d3beeef8e5b30fc32ab035ce1;path=/;HttpOnly;Max-Age=1800'), (b'content-encoding', b'gzip'), (b'date', b'Wed, 13 Aug 2025 15:22:49 GMT'), (b'server', b'istio-envoy'), (b'transfer-encoding', b'chunked')])
+2025-08-13 23:22:49,669 [INFO] HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-13 23:22:49,669 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-08-13 23:22:49,670 [DEBUG] receive_response_body.complete
+2025-08-13 23:22:49,670 [DEBUG] response_closed.started
+2025-08-13 23:22:49,670 [DEBUG] response_closed.complete
+2025-08-13 23:22:49,670 [DEBUG] HTTP Response: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "200 OK" Headers({'vary': 'Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding', 'x-request-id': 'bee8384d-97ba-96eb-a128-bedab040b4b6', 'x-dashscope-call-gateway': 'true', 'content-type': 'application/json', 'req-cost-time': '932', 'req-arrive-time': '1755098568376', 'resp-start-time': '1755098569309', 'x-envoy-upstream-service-time': '931', 'set-cookie': 'acw_tc=bee8384d-97ba-96eb-a128-bedab040b4b6fda94b4d3beeef8e5b30fc32ab035ce1;path=/;HttpOnly;Max-Age=1800', 'content-encoding': 'gzip', 'date': 'Wed, 13 Aug 2025 15:22:49 GMT', 'server': 'istio-envoy', 'transfer-encoding': 'chunked'})
+2025-08-13 23:22:49,670 [DEBUG] request_id: bee8384d-97ba-96eb-a128-bedab040b4b6
+2025-08-13 23:22:49,682 [DEBUG] 规划结果: plan_type=ambiguous, tasks=0
+2025-08-13 23:22:49,682 [WARNING] ⚠️ 需要用户补充信息: 需要补充具体的指标、时间范围或分析维度等信息，以便进行任务规划。
+2025-08-13 23:23:02,818 [INFO] 📝 用户补充内容: 分析Q3销售额下降原因...
+2025-08-13 23:23:02,819 [INFO] 🚀 进入规划节点 | 输入: 需要
+2025-08-13 23:23:02,823 [DEBUG] Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse'}, 'files': None, 'idempotency_key': 'stainless-python-retry-18139d0b-6a7e-4dbe-9521-1f90eda13751', 'post_parser': <function Completions.parse.<locals>.parser at 0x000002551D56CB80>, 'json_data': {'messages': [{'content': '\n    根据用户输入「需要 分析Q3销售额下降原因」进行任务规划：\n    1. 若包含明确指标/时间/维度 → 返回任务计划，plan_type 为 "query" 或 "analysis"，并列出任务步骤\n    2. 否则 → 返回缺失信息引导语，plan_type 为 "ambiguous"，并在 missing_info 字段说明需补充内容\n    输出格式：请用JSON格式输出, {"plan_type":"query", "task_list": ["query", "analysis", "report"], "missing_info": ""}', 'role': 'user'}], 'model': 'qwen-plus', 'response_format': {'type': 'json_schema', 'json_schema': {'schema': {'properties': {'plan_type': {'enum': ['query', 'analysis', 'ambiguous'], 'title': 'Plan Type', 'type': 'string'}, 'task_list': {'default': [], 'items': {'type': 'string'}, 'title': 'Task List', 'type': 'array'}, 'missing_info': {'default': '', 'title': 'Missing Info', 'type': 'string'}}, 'required': ['plan_type', 'task_list', 'missing_info'], 'title': 'PlanResponse', 'type': 'object', 'additionalProperties': False}, 'name': 'PlanResponse', 'strict': True}}, 'stream': False, 'temperature': 0.0}}
+2025-08-13 23:23:02,824 [DEBUG] Sending HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-08-13 23:23:02,824 [DEBUG] close.started
+2025-08-13 23:23:02,825 [DEBUG] close.complete
+2025-08-13 23:23:02,825 [DEBUG] connect_tcp.started host='dashscope.aliyuncs.com' port=443 local_address=None timeout=None socket_options=None
+2025-08-13 23:23:02,875 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002551DAB1130>
+2025-08-13 23:23:02,875 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x000002551D634150> server_hostname='dashscope.aliyuncs.com' timeout=None
+2025-08-13 23:23:03,033 [DEBUG] start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002551DAB0CE0>
+2025-08-13 23:23:03,033 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-08-13 23:23:03,034 [DEBUG] send_request_headers.complete
+2025-08-13 23:23:03,034 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-08-13 23:23:03,034 [DEBUG] send_request_body.complete
+2025-08-13 23:23:03,034 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-08-13 23:23:05,024 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'vary', b'Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding'), (b'x-request-id', b'c8eb6628-5a49-92ee-822a-4a19423ce16a'), (b'x-dashscope-call-gateway', b'true'), (b'content-type', b'application/json'), (b'req-cost-time', b'1907'), (b'req-arrive-time', b'1755098582756'), (b'resp-start-time', b'1755098584663'), (b'x-envoy-upstream-service-time', b'1883'), (b'content-encoding', b'gzip'), (b'date', b'Wed, 13 Aug 2025 15:23:04 GMT'), (b'server', b'istio-envoy'), (b'transfer-encoding', b'chunked')])
+2025-08-13 23:23:05,025 [INFO] HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-13 23:23:05,025 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-08-13 23:23:05,025 [DEBUG] receive_response_body.complete
+2025-08-13 23:23:05,025 [DEBUG] response_closed.started
+2025-08-13 23:23:05,025 [DEBUG] response_closed.complete
+2025-08-13 23:23:05,025 [DEBUG] HTTP Response: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "200 OK" Headers({'vary': 'Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding', 'x-request-id': 'c8eb6628-5a49-92ee-822a-4a19423ce16a', 'x-dashscope-call-gateway': 'true', 'content-type': 'application/json', 'req-cost-time': '1907', 'req-arrive-time': '1755098582756', 'resp-start-time': '1755098584663', 'x-envoy-upstream-service-time': '1883', 'content-encoding': 'gzip', 'date': 'Wed, 13 Aug 2025 15:23:04 GMT', 'server': 'istio-envoy', 'transfer-encoding': 'chunked'})
+2025-08-13 23:23:05,025 [DEBUG] request_id: c8eb6628-5a49-92ee-822a-4a19423ce16a
+2025-08-13 23:23:05,033 [DEBUG] 规划结果: plan_type=analysis, tasks=5
+2025-08-13 23:23:05,034 [INFO] 🔄 任务分发 | 步骤 1/5
+2025-08-13 23:23:05,034 [DEBUG] 路由决策: 收集Q3销售额相关数据
+2025-08-13 23:23:05,034 [WARNING] ⚠️ 需要用户补充信息: 需要补充具体的指标、时间范围或分析维度等信息，以便进行任务规划。
+2025-08-13 23:23:58,156 [INFO] 📝 用户补充内容: 分析Q3销售额下降原因...
+2025-08-13 23:23:58,156 [INFO] 🚀 进入规划节点 | 输入: 需要
+2025-08-13 23:23:58,161 [DEBUG] Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'X-Stainless-Helper-Method': 'chat.completions.parse'}, 'files': None, 'idempotency_key': 'stainless-python-retry-69f7aacd-2a0f-45c0-9d5f-a8543ba748ef', 'post_parser': <function Completions.parse.<locals>.parser at 0x000002551DA73EC0>, 'json_data': {'messages': [{'content': '\n    根据用户输入「需要 分析Q3销售额下降原因」进行任务规划：\n    1. 若包含明确指标/时间/维度 → 返回任务计划，plan_type 为 "query" 或 "analysis"，并列出任务步骤\n    2. 否则 → 返回缺失信息引导语，plan_type 为 "ambiguous"，并在 missing_info 字段说明需补充内容\n    输出格式：请用JSON格式输出, {"plan_type":"query", "task_list": ["query", "analysis", "report"], "missing_info": ""}', 'role': 'user'}], 'model': 'qwen-plus', 'response_format': {'type': 'json_schema', 'json_schema': {'schema': {'properties': {'plan_type': {'enum': ['query', 'analysis', 'ambiguous'], 'title': 'Plan Type', 'type': 'string'}, 'task_list': {'default': [], 'items': {'type': 'string'}, 'title': 'Task List', 'type': 'array'}, 'missing_info': {'default': '', 'title': 'Missing Info', 'type': 'string'}}, 'required': ['plan_type', 'task_list', 'missing_info'], 'title': 'PlanResponse', 'type': 'object', 'additionalProperties': False}, 'name': 'PlanResponse', 'strict': True}}, 'stream': False, 'temperature': 0.0}}
+2025-08-13 23:23:58,161 [DEBUG] Sending HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-08-13 23:23:58,161 [DEBUG] close.started
+2025-08-13 23:23:58,162 [DEBUG] close.complete
+2025-08-13 23:23:58,162 [DEBUG] connect_tcp.started host='dashscope.aliyuncs.com' port=443 local_address=None timeout=None socket_options=None
+2025-08-13 23:23:58,215 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002551DAB2F90>
+2025-08-13 23:23:58,215 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x000002551D634150> server_hostname='dashscope.aliyuncs.com' timeout=None
+2025-08-13 23:23:58,267 [DEBUG] start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002551DAB2B10>
+2025-08-13 23:23:58,267 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-08-13 23:23:58,267 [DEBUG] send_request_headers.complete
+2025-08-13 23:23:58,267 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-08-13 23:23:58,268 [DEBUG] send_request_body.complete
+2025-08-13 23:23:58,268 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-08-13 23:23:59,177 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'vary', b'Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding'), (b'x-request-id', b'987895a0-1d56-9081-914a-01cf424c30b0'), (b'x-dashscope-call-gateway', b'true'), (b'content-type', b'application/json'), (b'req-cost-time', b'863'), (b'req-arrive-time', b'1755098637951'), (b'resp-start-time', b'1755098638814'), (b'x-envoy-upstream-service-time', b'858'), (b'content-encoding', b'gzip'), (b'date', b'Wed, 13 Aug 2025 15:23:58 GMT'), (b'server', b'istio-envoy'), (b'transfer-encoding', b'chunked')])
+2025-08-13 23:23:59,177 [INFO] HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-13 23:23:59,177 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-08-13 23:23:59,178 [DEBUG] receive_response_body.complete
+2025-08-13 23:23:59,178 [DEBUG] response_closed.started
+2025-08-13 23:23:59,178 [DEBUG] response_closed.complete
+2025-08-13 23:23:59,178 [DEBUG] HTTP Response: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "200 OK" Headers({'vary': 'Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding', 'x-request-id': '987895a0-1d56-9081-914a-01cf424c30b0', 'x-dashscope-call-gateway': 'true', 'content-type': 'application/json', 'req-cost-time': '863', 'req-arrive-time': '1755098637951', 'resp-start-time': '1755098638814', 'x-envoy-upstream-service-time': '858', 'content-encoding': 'gzip', 'date': 'Wed, 13 Aug 2025 15:23:58 GMT', 'server': 'istio-envoy', 'transfer-encoding': 'chunked'})
+2025-08-13 23:23:59,178 [DEBUG] request_id: 987895a0-1d56-9081-914a-01cf424c30b0
+2025-08-13 23:23:59,186 [DEBUG] 规划结果: plan_type=query, tasks=3
+2025-08-13 23:23:59,186 [INFO] 🔄 任务分发 | 步骤 1/3
+2025-08-13 23:23:59,186 [DEBUG] 路由决策: query
+2025-08-13 23:23:59,187 [INFO] 🔍 执行查询任务: query
+2025-08-13 23:23:59,187 [INFO] 🔄 任务分发 | 步骤 2/3
+2025-08-13 23:23:59,187 [DEBUG] 路由决策: analysis
+2025-08-13 23:23:59,187 [INFO] 📊 执行分析任务: analysis
+2025-08-13 23:23:59,188 [INFO] 🔄 任务分发 | 步骤 3/3
+2025-08-13 23:23:59,188 [DEBUG] 路由决策: report
+2025-08-13 23:23:59,188 [INFO] 📝 生成最终报告
+2025-08-13 23:23:59,188 [INFO] 🔄 任务分发 | 步骤 4/3

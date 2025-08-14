@@ -1,0 +1,28 @@
+{
+  "agents": [
+    {
+      "id": "metric_query_agent",
+      "name": "指标查询Agent",
+      "capabilities": ["指标数据查询"],
+      "endpoint": "http://localhost:5801/fetch",
+      "parameters": "自然语言查询语句（如「地区、时间、数据类型」）",
+      "examples": "查询上海地区2023年Q1销售数据指标"
+    },
+    {
+      "id": "alert_analysis_agent",
+      "name": "预警分析Agent",
+      "capabilities": ["指标数据分析", "趋势预警"],
+      "endpoint": "http://localhost:5801/alert",
+      "parameters": "{\"data\": [指标数据（来自前序Agent的输出）]}",
+      "examples": "{\"data\": [\"metric_query_agent的输出结果\"]}"
+    },
+    {
+      "id": "report_generation_agent",
+      "name": "报告生成Agent",
+      "capabilities": ["报告整理", "图表展示"],
+      "endpoint": "http://localhost:5801/report",
+      "parameters": "包含分析结论的报告需求（如「基于{analysis_result}生成报告」）",
+      "examples": "根据如下分析结论（{alert_analysis_agent的输出}），生成含趋势图的销售数据报告"
+    }
+  ]
+}
