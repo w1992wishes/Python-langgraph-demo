@@ -1,6 +1,4 @@
-好的，下面是为 `https://github.com/w1992wishes/Python-LLM/tree/main` 项目生成的 README 说明，内容涵盖项目简介、安装方法、使用说明、主要功能、依赖项等。
 
-```
 # Python-LLM
 
 ## 项目简介
