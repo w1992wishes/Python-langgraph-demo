@@ -18,8 +18,9 @@ dependencies = [
     "streamlit>=1.48.0",
     "psycopg[binary]>=3.2.9", # 03_ReactAgentMemoryTest 引入
     "langgraph-checkpoint-postgres>=2.0.23", # 03_ReactAgentMemoryTest 引入
-    "redis>=6.4.0",  # 04_ReactAgentHLApiTest 引入
+    "redis>=6.4.0", # 04_ReactAgentHLApiTest 引入
     "concurrent-log-handler>=0.9.28", # 04_ReactAgentHLApiTest 引入
+    "numexpr>=2.11.0", # llm-compiler-demo 引入
 ]
 
 [tool.uv.workspace]
