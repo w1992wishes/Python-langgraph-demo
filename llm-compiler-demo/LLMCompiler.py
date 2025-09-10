@@ -1,5 +1,6 @@
 import getpass
 import os
+from prompts import build_llm_compiler_prompt, build_llm_compiler_joiner_prompt
 
 def _get_pass(var: str):
     if var not in os.environ:
@@ -17,7 +18,7 @@ OPENAI_API_KEY = os.getenv("DASHSCOPE_API_KEY")
 
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_openai import ChatOpenAI
-from math_tools import get_math_tool
+from tools import get_math_tool
 
 _get_pass("TAVILY_API_KEY")
 
@@ -66,9 +67,9 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableBranch
 from langchain_core.tools import BaseTool
 from langchain_openai import ChatOpenAI
-from output_parser import LLMCompilerPlanParser, Task
+from parsers import LLMCompilerPlanParser, Task
 
-prompt = hub.pull("wfh/llm-compiler")
+prompt = build_llm_compiler_prompt()
 print(prompt.pretty_print())
 
 def create_planner(
@@ -357,10 +358,7 @@ class JoinOutputs(BaseModel):
     action: Union[FinalResponse, Replan]
 
 
-joiner_prompt = hub.pull("wfh/llm-compiler-joiner").partial(
-    examples=""
-)  # You can optionally add examples
-
+joiner_prompt = build_llm_compiler_joiner_prompt()
 print(joiner_prompt.pretty_print())
 
 llm = ChatOpenAI(
@@ -477,7 +475,8 @@ for step in chain.stream(
     {
         "messages": [
             HumanMessage(
-                content="What's ((3*(4+5)/0.5)+3245) + 8? What's 32/4.23? What's the sum of those two values?"
+                content="计算 ((3*(4+5)/0.5)+3245)+8，再计算 32/4.23，最后求和"
+            #content = "What's the oldest parrot alive, and how much longer is that than the average?中文输出"
             )
         ]
     }

@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610bdb05-49c0-48dd-b58a-81a4fd87f174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/LLMCompiler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/math_tools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/output_parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/joiner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/planner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/prompts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/scheduler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/llm-compiler-demo/LLMCompiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/llm-compiler-demo/LLMCompiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/llm-compiler-demo/math_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/llm-compiler-demo/tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/llm-compiler-demo/output_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/llm-compiler-demo/parsers/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +48,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.LLMCompiler.executor": "Debug",
+    "Python.LLMCompiler.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.math_tools.executor": "Debug",
+    "Python.output_parser.executor": "Debug",
     "Python.qianwen.executor": "Run",
+    "Python.workflow.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -57,8 +66,12 @@
       <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\llm-compiler-demo" />
       <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\plan-and-execute-demo" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\llm-compiler-demo\tools" />
+      <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\llm-compiler-demo" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.LLMCompiler">
+  <component name="RunManager" selected="Python.main">
     <configuration name="LLMCompiler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
@@ -81,7 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="qianwen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -90,11 +103,77 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-demo/model" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-compiler-demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-demo/model/qianwen.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-compiler-demo/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="math_tools" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-langgraph-demo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-compiler-demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-compiler-demo/math_tools.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="output_parser" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-langgraph-demo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-compiler-demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-compiler-demo/output_parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="workflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-langgraph-demo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-compiler-demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-compiler-demo/workflow.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -105,8 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.LLMCompiler" />
-        <item itemvalue="Python.qianwen" />
+        <item itemvalue="Python.math_tools" />
+        <item itemvalue="Python.output_parser" />
+        <item itemvalue="Python.workflow" />
       </list>
     </recent_temporary>
   </component>
@@ -127,16 +209,5 @@
       <updated>1755916134545</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/llm-compiler-demo/LLMCompiler.py</url>
-          <line>253</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

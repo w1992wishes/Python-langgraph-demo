@@ -1,9 +1,24 @@
+from langchain_openai import ChatOpenAI
+from config import Settings
+
+
+def get_chat_openai() -> ChatOpenAI:
+    """获取统一配置的ChatOpenAI实例（兼容DashScope）"""
+    return ChatOpenAI(
+        model=Settings.LLM_MODEL,
+        temperature=Settings.TEMPERATURE,
+        api_key=Settings.OPENAI_API_KEY,
+        base_url=Settings.OPENAI_BASE_URL,
+        max_tokens=Settings.MAX_TOKENS
+    )
+
+
+
 import math
 import re
 from typing import List, Optional
 
 import numexpr
-from langchain.chains.openai_functions import create_structured_output_runnable
 from langchain_core.messages import SystemMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables import RunnableConfig
@@ -132,6 +147,9 @@ def get_math_tool(llm: ChatOpenAI):
                 )
                 chain_input["context"] = [SystemMessage(content=context_str)]
         code_model = extractor.invoke(chain_input, config)
+
+        print(f"-------- {code_model} -------------")
+
         try:
             return _evaluate_expression(code_model.code)
         except Exception as e:
@@ -142,3 +160,53 @@ def get_math_tool(llm: ChatOpenAI):
         func=calculate_expression,
         description=_MATH_DESCRIPTION,
     )
+
+from langchain_community.tools.tavily_search import TavilySearchResults
+from config import Settings
+
+
+def get_tavily_search() -> TavilySearchResults:
+    """获取Tavily搜索工具实例"""
+    return TavilySearchResults(
+        max_results=Settings.TAVILY_MAX_RESULTS,
+        api_key=Settings.TAVILY_API_KEY,
+        description='tavily_search_results_json(query="the search query") - a search engine.'
+    )
+
+
+if __name__ == "__main__":
+
+    import os
+
+    calculate = get_math_tool(ChatOpenAI(
+        model="qwen-plus",  # DeepSeek的对话模型
+        temperature=0,
+        api_key=os.getenv("DASHSCOPE_API_KEY"),
+        base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    ))
+
+    # result1 = calculate.invoke(
+    #     {
+    #         "problem": "What's the temp of sf + 5?",
+    #         "context": ["Thet empreature of sf is 32 degrees"],
+    #     }
+    # )
+    # print(result1)
+    #
+    # result2= calculate.invoke(
+    #     {
+    #         "problem": "7月深圳深圳nbev环比降幅多少",
+    #         "context": ["7月深圳nbev销量是1000辆，6月是2000辆"],
+    #     }
+    # )
+    # print(result2)
+
+
+
+    result3= calculate.invoke(
+        {
+            "problem": "总价加10%税费是多少",
+            "context": ["任务 1 结果：“A 商品单价 20 元”", "任务 2 结果：“购买 A 商品 5 件”"],
+        }
+    )
+    print(result3)
