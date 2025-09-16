@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610bdb05-49c0-48dd-b58a-81a4fd87f174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/config/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/graph.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/joiner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/planner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/prompts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-compiler-demo/scheduler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interrupt_demo/1_resume_multiple_interrupts_with_one_invocation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interrupt_demo/2_approve_or_reject.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interrupt_demo/3_review_and_edit_state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interrupt_demo/4_review_tool_calls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interrupt_demo/5_validate_human_input.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interrupt_demo/6_debug_with_interrupts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/llm-compiler-demo/LLMCompiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/llm-compiler-demo/LLMCompiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/llm-compiler-demo/math_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/llm-compiler-demo/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/llm-compiler-demo/output_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/llm-compiler-demo/parsers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +45,25 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.01_reviewCustomToolCalls.executor": "Debug",
+    "Python.1_pause_using_interrupt (1).executor": "Run",
+    "Python.1_resume_multiple_interrupts_with_one_invocation (1).executor": "Run",
+    "Python.2_approve_or_reject (1).executor": "Run",
+    "Python.2_resume_multiple_interrupts_with_one_invocation.executor": "Run",
+    "Python.3_review_and_edit_state (1).executor": "Run",
+    "Python.4_review_tool_calls (1).executor": "Debug",
+    "Python.5_review_tool_calls.executor": "Run",
+    "Python.5_validate_human_input.executor": "Run",
+    "Python.6_debug_with_interrupts.executor": "Run",
     "Python.LLMCompiler.executor": "Run",
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "Python.math_tools.executor": "Debug",
     "Python.output_parser.executor": "Debug",
     "Python.qianwen.executor": "Run",
+    "Python.review_and_edit_state.executor": "Run",
+    "Python.test1.executor": "Debug",
+    "Python.test2.executor": "Run",
+    "Python.test3.executor": "Run",
     "Python.workflow.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -71,8 +82,8 @@
       <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\llm-compiler-demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="LLMCompiler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.6_debug_with_interrupts">
+    <configuration name="1_pause_using_interrupt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,11 +92,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-compiler-demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interrupt_demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-compiler-demo/LLMCompiler.py" />
+      <option name="SCRIPT_NAME" value="D:\3.wan\3-work\code\myself\Python-langgraph-demo\interrupt_demo\1_pause_using_interrupt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -94,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="1_resume_multiple_interrupts_with_one_invocation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,11 +114,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-compiler-demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interrupt_demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-compiler-demo/main.py" />
+      <option name="SCRIPT_NAME" value="D:\3.wan\3-work\code\myself\Python-langgraph-demo\interrupt_demo\1_resume_multiple_interrupts_with_one_invocation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,7 +127,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="math_tools" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="2_approve_or_reject (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,11 +136,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-compiler-demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interrupt_demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-compiler-demo/math_tools.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interrupt_demo/2_approve_or_reject.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="output_parser" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="3_review_and_edit_state (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,11 +158,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-compiler-demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interrupt_demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-compiler-demo/output_parser.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interrupt_demo/3_review_and_edit_state.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,7 +171,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="workflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="4_review_tool_calls (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,11 +180,55 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-compiler-demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interrupt_demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-compiler-demo/workflow.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interrupt_demo/4_review_tool_calls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="5_validate_human_input" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-langgraph-demo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interrupt_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interrupt_demo/5_validate_human_input.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="6_debug_with_interrupts" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-langgraph-demo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interrupt_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interrupt_demo/6_debug_with_interrupts.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -184,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.LLMCompiler" />
-        <item itemvalue="Python.math_tools" />
-        <item itemvalue="Python.output_parser" />
-        <item itemvalue="Python.workflow" />
+        <item itemvalue="Python.6_debug_with_interrupts" />
+        <item itemvalue="Python.5_validate_human_input" />
+        <item itemvalue="Python.4_review_tool_calls (1)" />
+        <item itemvalue="Python.3_review_and_edit_state (1)" />
+        <item itemvalue="Python.2_approve_or_reject (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -209,5 +264,48 @@
       <updated>1755916134545</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/llm-compiler-demo/scheduler.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/llm-compiler-demo/scheduler.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/llm-compiler-demo/scheduler.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/llm-compiler-demo/scheduler.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/llm-compiler-demo/LLMCompiler.py</url>
+          <line>376</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/interrupt_demo/4_review_tool_calls.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
