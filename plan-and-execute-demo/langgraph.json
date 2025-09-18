@@ -1,0 +1,9 @@
+{
+  "dockerfile_lines": [],
+  "graphs": {
+    "plan-execute": "./plan-and-execute-demo/graph.py:app"
+  },
+  "python_version": "3.12",
+  "env": "./.env",
+  "dependencies": ["."]
+}

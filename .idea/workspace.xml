@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610bdb05-49c0-48dd-b58a-81a4fd87f174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/llm-demo/model/zhipu_basic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-demo/model/zhipu_stream.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/llm-demo/model/zhipu_template.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm-demo/model/doubao_basic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm-demo/model/siliconflow_basic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plan-and-execute-demo/langgraph.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan-and-execute-demo/graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/plan-and-execute-demo/graph.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,38 +55,45 @@
     "Python.5_validate_human_input.executor": "Run",
     "Python.6_debug_with_interrupts.executor": "Run",
     "Python.LLMCompiler.executor": "Run",
+    "Python.doubao_basic.executor": "Run",
+    "Python.graph.executor": "Run",
     "Python.main.executor": "Debug",
     "Python.math_tools.executor": "Debug",
     "Python.output_parser.executor": "Debug",
     "Python.qianwen.executor": "Run",
     "Python.review_and_edit_state.executor": "Run",
+    "Python.siliconflow_basic.executor": "Run",
     "Python.test1.executor": "Debug",
     "Python.test2.executor": "Run",
     "Python.test3.executor": "Run",
     "Python.workflow.executor": "Run",
     "Python.zhipu.executor": "Run",
+    "Python.zhipu_basic.executor": "Run",
     "Python.zhipu_stream.executor": "Run",
     "Python.zhipu_template.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/3.wan/3-work/code/myself/Python-langgraph-demo/llm-demo/model",
+    "last_opened_file_path": "D:/3.wan/3-work/code/myself/Python-langgraph-demo",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo" />
       <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\llm-demo\model" />
       <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\llm-compiler-demo" />
       <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\plan-and-execute-demo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\plan-and-execute-demo" />
+      <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo" />
       <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\llm-compiler-demo\tools" />
       <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\llm-compiler-demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.zhipu_stream">
-    <configuration name="6_debug_with_interrupts" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.siliconflow_basic">
+    <configuration name="doubao_basic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,11 +102,33 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interrupt_demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-demo/model" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interrupt_demo/6_debug_with_interrupts.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-demo/model/doubao_basic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="graph" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-langgraph-demo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plan-and-execute-demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plan-and-execute-demo/graph.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,6 +159,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="siliconflow_basic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-langgraph-demo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-demo/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-demo/model/siliconflow_basic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="zhipu_basic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
@@ -139,51 +194,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\3.wan\3-work\code\myself\Python-langgraph-demo\llm-demo\model\zhipu_basic.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="zhipu_stream" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python-langgraph-demo" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-demo/model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-demo/model/zhipu_stream.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="zhipu_template" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python-langgraph-demo" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/llm-demo/model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-demo/model/zhipu_template.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/llm-demo/model/zhipu_basic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.zhipu_stream" />
-        <item itemvalue="Python.zhipu_template" />
+        <item itemvalue="Python.siliconflow_basic" />
         <item itemvalue="Python.qianwen" />
         <item itemvalue="Python.zhipu_basic" />
-        <item itemvalue="Python.6_debug_with_interrupts" />
+        <item itemvalue="Python.graph" />
+        <item itemvalue="Python.doubao_basic" />
       </list>
     </recent_temporary>
   </component>

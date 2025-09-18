@@ -22,6 +22,7 @@ dependencies = [
     "concurrent-log-handler>=0.9.28", # 04_ReactAgentHLApiTest 引入
     "numexpr>=2.11.0", # llm-compiler-demo 引入
     "ipython>=9.5.0", # interrupt_demo 引入
+    "langchain-tavily>=0.2.11",
 ]
 
 [tool.uv.workspace]
