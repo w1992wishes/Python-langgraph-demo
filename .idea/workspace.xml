@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610bdb05-49c0-48dd-b58a-81a4fd87f174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/react_agent_demo/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_agent_demo/api_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/react_agent_demo/api_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_agent_demo/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/react_agent_demo/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_agent_demo/test_api.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,46 +38,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.01_reviewCustomToolCalls.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.1_pause_using_interrupt (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.1_resume_multiple_interrupts_with_one_invocation (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.2_approve_or_reject (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.2_resume_multiple_interrupts_with_one_invocation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.3_review_and_edit_state (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.4_review_tool_calls (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Python.5_review_tool_calls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.5_validate_human_input.executor&quot;: &quot;Run&quot;,
-    &quot;Python.6_debug_with_interrupts.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LLMCompiler.executor&quot;: &quot;Run&quot;,
-    &quot;Python.api_server.executor&quot;: &quot;Run&quot;,
-    &quot;Python.doubao_basic.executor&quot;: &quot;Run&quot;,
-    &quot;Python.graph.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.math_tools.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.output_parser.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.qianwen.executor&quot;: &quot;Run&quot;,
-    &quot;Python.query_structurer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.review_and_edit_state.executor&quot;: &quot;Run&quot;,
-    &quot;Python.siliconflow_basic.executor&quot;: &quot;Run&quot;,
-    &quot;Python.stream_mode_demo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test1.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.test2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.workflow.executor&quot;: &quot;Run&quot;,
-    &quot;Python.zhipu.executor&quot;: &quot;Run&quot;,
-    &quot;Python.zhipu_basic.executor&quot;: &quot;Run&quot;,
-    &quot;Python.zhipu_stream.executor&quot;: &quot;Run&quot;,
-    &quot;Python.zhipu_template.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/3.wan/3-work/code/their/Python/agent/SQLBot&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.01_reviewCustomToolCalls.executor": "Debug",
+    "Python.1_pause_using_interrupt (1).executor": "Run",
+    "Python.1_resume_multiple_interrupts_with_one_invocation (1).executor": "Run",
+    "Python.2_approve_or_reject (1).executor": "Run",
+    "Python.2_resume_multiple_interrupts_with_one_invocation.executor": "Run",
+    "Python.3_review_and_edit_state (1).executor": "Run",
+    "Python.4_review_tool_calls (1).executor": "Debug",
+    "Python.5_review_tool_calls.executor": "Run",
+    "Python.5_validate_human_input.executor": "Run",
+    "Python.6_debug_with_interrupts.executor": "Run",
+    "Python.LLMCompiler.executor": "Run",
+    "Python.api_server.executor": "Run",
+    "Python.doubao_basic.executor": "Run",
+    "Python.graph.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.math_tools.executor": "Debug",
+    "Python.output_parser.executor": "Debug",
+    "Python.qianwen.executor": "Run",
+    "Python.query_structurer.executor": "Run",
+    "Python.review_and_edit_state.executor": "Run",
+    "Python.siliconflow_basic.executor": "Run",
+    "Python.stream_mode_demo.executor": "Run",
+    "Python.test1.executor": "Debug",
+    "Python.test2.executor": "Run",
+    "Python.test3.executor": "Run",
+    "Python.test_agents.executor": "Run",
+    "Python.test_api.executor": "Run",
+    "Python.workflow.executor": "Run",
+    "Python.zhipu.executor": "Run",
+    "Python.zhipu_basic.executor": "Run",
+    "Python.zhipu_stream.executor": "Run",
+    "Python.zhipu_template.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/3.wan/3-work/code/their/Python/agent/SQLBot",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo" />
@@ -90,7 +93,7 @@
       <recent name="D:\3.wan\3-work\code\myself\Python-langgraph-demo\llm-compiler-demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_api">
+  <component name="RunManager" selected="Python.test_agents">
     <configuration name="api_server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
@@ -157,7 +160,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="stream_mode_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_agents" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-langgraph-demo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -166,11 +169,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langgraph_demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/react_agent_demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langgraph_demo/stream_mode_demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/react_agent_demo/test_agents.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -203,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_api" />
+        <item itemvalue="Python.test_agents" />
         <item itemvalue="Python.api_server" />
+        <item itemvalue="Python.test_api" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.query_structurer" />
-        <item itemvalue="Python.stream_mode_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -261,11 +264,6 @@
           <url>file://$PROJECT_DIR$/interrupt_demo/4_review_tool_calls.py</url>
           <line>37</line>
           <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/react_agent_demo/api_server.py</url>
-          <line>93</line>
-          <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
