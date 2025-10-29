@@ -20,7 +20,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # 导入各个模块的会话管理器
-from agent_utils import session_manager
+from metric_agent_utils import metric_session_manager
 from table_agent_utils import table_session_manager
 from etl_agent_utils import etl_session_manager
 
@@ -74,7 +74,7 @@ async def chat_with_metric_agent(request: MessageRequest):
     
     try:
         # 获取或创建与session_id关联的agent_executor实例
-        agent_executor = await session_manager.get_or_create_agent(session_id)
+        agent_executor = await metric_session_manager.get_or_create_agent(session_id)
         
         # 执行agent - 带会话参数
         result = await agent_executor.ainvoke(

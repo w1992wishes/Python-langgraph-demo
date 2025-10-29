@@ -3,7 +3,6 @@ import time
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 from langchain.tools import StructuredTool
-from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
@@ -161,9 +160,6 @@ def create_etl_agent():
         tools=etl_tools,
         prompt=prompt
     )
-
-    # 创建记忆组件
-    memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
     # 创建Agent执行器
     agent_executor = AgentExecutor.from_agent_and_tools(
